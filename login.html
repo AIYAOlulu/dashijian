@@ -24,7 +24,7 @@
         <!-- ✿登录区  javascript:;防止跳转-->
 
         <div class="login-box">
-            <form class="layui-form" action="">
+            <form class="layui-form" action="" id="form_login">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -34,7 +34,7 @@
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 登录按钮 -->
@@ -50,7 +50,7 @@
 
         <!-- ✿注册区 默认隐藏注册-->
         <div class="reg-box" style="display: none;">
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form_reg">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -60,13 +60,13 @@
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 密码确认框 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="repassword" required lay-verify="required" placeholder="再次确认密码"
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="再次确认密码"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 注册按钮 -->
@@ -80,8 +80,11 @@
             </form>
         </div>
     </div>
+    <!-- 先导入layui.js -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
     <!--导入jquery 操作dom元素 -->
     <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/base.js"></script>
     <!--找到assets/js目录，在里面手动创建一个login.js文件-->
     <script src="/assets/js/login.js"></script>
 </body>
